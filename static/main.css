@@ -1,0 +1,412 @@
+/*ZOE HIGHTOWER*/
+    
+/* search results*/
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    
+}
+.band {
+    text-align: center;
+    width: 250px; 
+    border-radius: 30px;
+    padding: 30px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    color:rgb(63, 73, 207);
+    background-color: rgb(253, 223, 228)!important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 50px;
+}
+.band:hover{
+    transform: scale(1.1);
+    text-decoration: none;
+}
+.band-name {
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold !important;
+}
+.band-image {
+    width: 80%; 
+    height: 200px; 
+    border-radius: 8px;
+    object-fit: cover; 
+    margin-bottom: 25px;
+}
+.highlight {
+    background-color:rgb(63, 73, 207);
+    color: rgb(253, 223, 228);
+    font-weight: bold;
+}
+.search_container{
+    font-family: 'Futura', sans-serif;
+}
+.search_header{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.search_header h1{
+    color: #555;
+}
+.search_header p{
+    color: rgb(178, 182, 185);
+}
+.blue{
+    color: rgb(63, 73, 207);
+}
+.center{
+    text-align:center;
+    font-size: 30px !important;
+    color: rgb(63, 73, 207);
+}
+
+
+
+/*edit/add stages*/
+.whole{
+    background-color:  rgb(253, 223, 228);
+    padding: 50px;
+}
+.edit_title, .add_title{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color:#555;
+    padding-bottom: 15px;
+    padding-top: 30px;
+
+}
+#success {
+    display: block !important;
+    color: rgb(63, 73, 207); 
+    font-weight: bold;
+    text-align: center;
+}
+
+.error_message{
+    color: red;
+}
+#new-form{
+    padding-top: 20px;
+}
+.edit_container, .add_container{
+    font-family: 'Futura', sans-serif;
+    border: 2px solid #555;
+    border-radius: 30px;
+    background-color: rgb(240, 246, 250);
+    padding-bottom: 40px;
+}
+#submit{
+    margin:5px !important;
+    background-color:rgb(63, 73, 207);
+    width:80% !important;
+    max-height: 90px;
+    font-size: 45px !important;
+
+}
+#discard{
+    margin:5px !important;
+    background-color:rgb(63, 73, 207);
+    width:60% !important;
+}
+.col-form-label{
+    color:rgb(178, 182, 185);
+}
+.note{
+    text-align: center;
+    background-color:rgb(63, 73, 207);
+    color:rgb(240, 246, 250);
+    border-radius: 50px;
+    width: fit-content;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.252);
+    margin-bottom: 30px;
+}
+
+.btn-outline-primary{
+    border-color: rgb(63, 73, 207) !important;
+    color: rgb(63, 73, 207) !important;
+}
+.btn-primary{
+    background-color: rgb(63, 73, 207) !important;
+}
+.btn-outline-primary:hover{
+    background-color: rgb(63, 73, 207) !important;
+    color: rgb(240, 246, 250) !important;
+}
+.btn-primary:hover{
+    background-color: rgb(240, 246, 250) !important;
+    color: rgb(63, 73, 207) !important;
+    border-color: rgb(63, 73, 207) !important;
+}
+.genre-btn, .band-btn{
+    margin:5px !important;
+}
+
+
+
+
+/*layout stuff*/
+body, html{
+    font-family: 'Futura', sans-serif;
+    background-color: rgb(240, 246, 250) !important;
+}
+.navbar{
+    background-color: rgb(63, 73, 207);
+    font-family: 'Futura', sans-serif;
+}
+.navbar-brand{
+    color: rgb(253, 223, 228);
+    font-weight:600;
+}
+.navbar-brand:hover{
+    color: rgb(178, 182, 185);
+}
+.search_btn {
+    background-color: rgb(253, 223, 228) !important;
+    color: white;
+}
+.search_btn:hover {
+    background-color: rgb(240, 246, 250) !important;
+    color: rgb(63, 73, 207) !important;
+}
+.nav-link{
+    color: rgb(178, 182, 185) !important;
+}
+.nav-link:hover{
+    color: rgb(253, 223, 228) !important;
+}
+#search_field{
+    background-color: rgb(240, 246, 250) !important;
+}
+
+/*intro group */
+.cover_container{
+    background:rgb(253, 223, 228);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Futura', sans-serif;
+    padding-left: 50px !important;
+}
+.website_title {
+    font-size: 6.6rem;
+    font-weight: bold;
+    color: rgb(63, 73, 207);
+    margin: 0;
+}
+.discover-text {
+    font-size: 2rem;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.website_about {
+    font-size: 18px;
+    color: #555;
+    max-width: 400px;
+    margin-top: 20px;
+}
+.banner {
+    width: 100%;
+    height: 90vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+.col-md-5 {
+    padding-left: 0 !important;
+}
+
+/*front page favorites*/
+.favorite_container{
+    font-family: 'Futura', sans-serif;
+}
+.fav_title {
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(63, 73, 207);
+}
+#favorite-items {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.favorite-item{
+    text-align: center;
+    width: 250px; 
+    border-radius: 30px;
+    padding: 30px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    color:rgb(63, 73, 207);
+    background-color: rgb(253, 223, 228)!important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    
+}
+.favorite-item:hover{
+    text-decoration: none;
+    background-color: rgb(63, 73, 207) !important;
+    color:rgb(253, 223, 228);
+}
+.favorite-item img {
+    width: 100%; 
+    height: 300px; 
+    border-radius: 8px;
+    object-fit: cover; 
+    margin-bottom: 25px;
+}
+
+
+
+/*bandpage*/
+
+.band_header{
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+.bandpage{
+    background-color: rgb(253, 223, 228)!important;
+    padding-left: 75px;
+    font-family: 'Futura', sans-serif;
+    padding-bottom: 50px;
+}
+#name {
+    color: rgb(63, 73, 207);
+    font-size: 9vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+}
+#listeners {
+    font-size: 1.5vw;
+    color: #555;
+    margin-top:-2.5vw;
+    margin-bottom: 20px;
+}
+#image img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    
+}
+.smaller_name{
+    font-size: 7vw !important;
+}
+#edit_button{
+    background-color: rgb(63, 73, 207) !important;
+    width: 150px;
+}
+#edit_button:hover{
+    background-color: rgb(240, 246, 250) !important;
+    color: rgb(63, 73, 207) !important;
+}
+
+#description {
+    font-size: 20px;
+    max-width:100%;
+    font-weight: 100;
+    text-align: center;
+}
+.bandpage h3{
+    color: rgb(178, 182, 185) ;
+    font-size: 20px !important;
+}
+.artist-button{
+    background-color: rgb(63, 73, 207) !important;
+    margin: 10px ;
+    
+}
+.artist-button:hover{
+    background-color:rgb(240, 246, 250) !important;
+    color: #555;
+}
+.explore{
+    background-color: rgb(240, 246, 250);
+    border-radius: 15px;
+    padding:20px;
+    max-width: 500px;
+    margin-right: 50px;
+    margin-left: 70px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+#album_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px ;
+    gap:30px
+}
+
+.album {
+    background-color:rgb(63, 73, 207);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    max-width: 300px;
+    margin: 20px;
+}
+
+.album_name {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(253, 223, 228);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cover {
+    max-width: 300px; 
+    max-height: 300px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.song_list {
+    font-size: 14px;
+    color: rgb(178, 182, 185);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.song_list span {
+    margin-right: 10px;
+}
+
+.popular{
+    font-family: 'Futura', sans-serif;
+}
+.popular h1{
+    padding-bottom: 25px;
+    padding-top: 25px;
+    color: #555;
+    text-align:center;
+
+}
+.bandpage h1{
+    color: #555;
+}

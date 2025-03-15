@@ -1,0 +1,172 @@
+<!--ZOE HIGHTOWER-->
+{% extends "layout.html" %}
+{% block content %}
+<html lang="en">
+<head>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" crossorigin="anonymous">
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'add.js') }}"></script>
+
+    <script>
+        var data = {{ data | tojson }};
+        var bands = {{ bands | tojson }};
+        var genres = {{ genres | tojson }};
+
+    </script>
+</head>
+<body>
+    <div id="success"></div>
+    <div class="row whole">
+        <div class="col-md-3 col-sm-12"></div>
+        <div class="add_container col-md-6 col-sm-12">
+            <div class="add_title col-md-12 col-sm-12">Adding new band</div>
+            <div class="note col-md-8 col-sm-12">
+                <div class="note_header">NOTE</div>
+                <div class="note_content">Type all lists where items are separated by line.</div>
+            </div>
+                <div class="container d-flex justify-content-center">
+                    <form id="new-form" novalidate style="width: 100%; max-width: 600px;">
+                        
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Band name</label>
+                            <div class="col-sm-9" id="form-name">
+                                <input type="text" class="form-control" id="input-name" name="name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Monthly Listeners</label>
+                            <div class="col-sm-9" id="form-attack">
+                                <input type="text" min="0" class="form-control" id="input-listeners" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Image link</label>
+                            <div class="col-sm-9" id="form-image">
+                                <input type="url" class="form-control" id="input-image" required>
+                                <div class="invalid-feedback">
+                                    Please provide a link of an image of the band.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Description</label>
+                            <div class="col-sm-9" id="form-description">
+                                <textarea class="form-control" id="input-description" rows="10" required></textarea>
+                                <div class="invalid-feedback">
+                                    Please provide a description of the band.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Band Members</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" id="input-band-members" rows="5" required></textarea>
+                                <div class="invalid-feedback">
+                                    Please provide a list of band members.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row genre-label">
+                            <label class="col-sm-3 col-form-label">Genres</label>
+                            <div class="col-sm-9" id="genre-buttons">
+                                {% for each in genres %}
+                                <button type="button" class="btn btn-outline-primary genre-btn" data-value="{{ each }}">
+                                    {{ each }}
+                                </button>
+                                {% endfor %}
+                            </div>
+                        </div>
+            
+                        <div class="form-group row band-label">
+                            <label class="col-sm-3 col-form-label">Similar Bands</label>
+                            <div class="col-sm-9" id="band-buttons">
+                                {% for each in bands %}
+                                <button type="button" class="btn btn-outline-primary band-btn" data-value="{{ each }}">
+                                    {{ each }}
+                                </button>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Album Name</label>
+                        <div class="col-sm-9">
+                         <input type="text" class="form-control" id="1input-album-name" required>
+                        <div class="invalid-feedback">
+                            Please provide the album name.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Album Cover URL</label>
+                        <div class="col-sm-9">
+                            <input type="url" class="form-control" id="1input-album-cover-url" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid URL for the album cover.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Songs in Album</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" id="1input-songs" rows="5" required></textarea>
+                            <div class="invalid-feedback">
+                                Please provide a list of songs in the album.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Album Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="2input-album-name" required>
+                            <div class="invalid-feedback">
+                                Please provide the album name.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Album Cover URL</label>
+                        <div class="col-sm-9">
+                            <input type="url" class="form-control" id="2input-album-cover-url" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid URL for the album cover.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Songs in Album</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" id="2input-songs" rows="5" required></textarea>
+                            <div class="invalid-feedback">
+                                Please provide a list of songs in the album.
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-9">
+                        <button id="submit" class="btn btn-primary w-100">Submit</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+    
+    
+
+    
+    
+</body>
+{% endblock %}

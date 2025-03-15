@@ -1,0 +1,61 @@
+<!--ZOE HIGHTOWER-->
+{% extends "layout.html" %}
+{% block content %}
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" crossorigin="anonymous">
+
+        <script type="text/javascript" src="{{ url_for('static', filename = 'bandpage.js') }}"></script>
+        <script>
+            var band = {{ band | tojson }};
+            var data = {{ data | tojson }};
+        </script>
+    </head>
+    <body>
+        <div class="bandpage">
+            <div class="row band_header">
+                <div class="col-md-10 col-sm-12">
+                    <div id="name"></div>
+                    <div id="listeners">Monthly Listeners: </div>
+                </div>
+                <div class="col-md-2 col-sm-12 d-flex align-items-center">
+                    <form action="/edit/{{band['id']}}">
+                        <button type="submit" id="edit_button" class="btn btn-primary">Edit</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-8 col-sm-12">
+            <div id="image"></div>
+            <div id="description">
+            </div>
+            
+            </div>
+            <div class="links col-md-4 col-sm-12">
+                <div class="explore">
+                    <h1>Explore Similar</h1>
+                <h3>Similar Artists</h3>
+                <div id="similar_bands"></div>
+                <h3>Genres</h3>
+                <div id="genres"></div>
+                <h3>Members</h3>
+                <div id="members"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="popular">
+        <h1>Recommended Albums</h1>
+            <div id="album_container" class="row"></div>
+            </div>
+
+    </body>
+</html>
+
+{% endblock %}
